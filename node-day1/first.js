@@ -1,12 +1,13 @@
-
-require('./add')
+const res=require('./add')
 function  sayhello(){
   console.log("Welcome node js")
 }
 
-console.log("run first")
-const val=add(10,10)
-console.log(val)
+
+const pw=res(12.67)
+console.log(pw)
+
+
 
 
 setTimeout(sayhello,2000)

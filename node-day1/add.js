@@ -1,5 +1,8 @@
- export const add=(a,b)=>{
+const { models } = require("mongoose")
+
+  const add=(a,b)=>{
     return a+b
 }
-const sum = add(12,12)
-console.log(sum)
+
+
+models.export =add;
