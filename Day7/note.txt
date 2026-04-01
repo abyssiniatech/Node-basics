@@ -1,0 +1,161 @@
+1. COMMONJS (CJS) IN NODE.JS
+
+1.1 Definition
+CommonJS is the default module system in Node.js. It is used to organize code into reusable modules.
+
+1.2 Syntax (Import & Export)
+
+* Import:
+  const fs = require("fs");
+
+* Export:
+  module.exports = { functionName };
+
+1.3 Example
+
+// math.js
+function add(a, b) {
+return a + b;
+}
+module.exports = { add };
+
+// app.js
+const math = require("./math");
+console.log(math.add(2, 3)); // 5
+
+1.4 Key Features
+
+* Uses require() to import modules
+* Uses module.exports to export
+* Synchronous loading
+* Default in Node.js (without configuration)
+
+---
+
+2. ES MODULES (ESM)
+
+2.1 Definition
+ES Modules are the modern JavaScript module system used in browsers and modern Node.js.
+
+2.2 Enable ES Modules
+Add in package.json:
+{
+"type": "module"
+}
+
+2.3 Syntax (Import & Export)
+
+* Import:
+  import fs from "fs";
+
+* Export:
+  export function add(a, b) {
+  return a + b;
+  }
+
+2.4 Example
+
+// math.js
+export function add(a, b) {
+return a + b;
+}
+
+// app.js
+import { add } from "./math.js";
+console.log(add(2, 3)); // 5
+
+2.5 Key Features
+
+* Uses import/export keywords
+* Asynchronous loading
+* Works in browsers and Node.js
+* Requires configuration in Node.js
+
+---
+
+3. COMMONJS VS ES MODULES (COMPARISON)
+
+3.1 Syntax
+CommonJS:
+const module = require("module");
+
+ES Modules:
+import module from "module";
+
+---
+
+3.2 Export Style
+CommonJS:
+module.exports = {}
+
+ES Modules:
+export / export default
+
+---
+
+3.3 Loading
+CommonJS:
+Synchronous (loads step-by-step)
+
+ES Modules:
+Asynchronous (better for performance)
+
+---
+
+3.4 File Extension
+CommonJS:
+.js (default)
+
+ES Modules:
+.js with "type": "module" OR .mjs
+
+---
+
+3.5 Usage
+CommonJS:
+Mainly Node.js (backend)
+
+ES Modules:
+Frontend + Backend (modern standard)
+
+---
+
+3.6 Flexibility
+CommonJS:
+Can use require inside conditions
+
+ES Modules:
+Must use import at top level only
+
+---
+
+4. WHEN TO USE WHICH
+
+4.1 Use CommonJS when:
+
+* You are working on Node.js backend
+* You want simplicity
+* No need for modern frontend compatibility
+
+4.2 Use ES Modules when:
+
+* You want modern JavaScript standard
+* You work with React / Next.js
+* You want better performance and future-proof code
+
+---
+
+5. IMPORTANT TIPS
+
+5.1 Do NOT mix require and import in the same file
+5.2 Always add file extension (.js) in ES Modules
+5.3 Use CommonJS for learning Node.js basics
+5.4 Use ES Modules for advanced and full-stack projects
+
+---
+
+6. QUICK SUMMARY
+
+* CommonJS = require + module.exports (Simple, Node.js default)
+* ES Modules = import + export (Modern, universal)
+* Both are used to organize and reuse code
