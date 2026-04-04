@@ -12,12 +12,7 @@ console.log(path.sep)
 console.log(path.delimiter)
 console.log(path.isAbsolute(__dirname))
 console.log(path.isAbsolute('./index.js'))
-
-
-
-
-
-
+console.log(__dirname + '/index.js')
 
 
 
