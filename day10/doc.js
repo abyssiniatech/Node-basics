@@ -1,2 +1,3 @@
-const fs =require('fs');
-// i use file system
+
+const sum=require('./add')
+console.log('welcome to surafel')
