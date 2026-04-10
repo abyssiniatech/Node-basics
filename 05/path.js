@@ -14,7 +14,9 @@ console.log(path.join(__dirname,"hello.txt"));
 
 // file exists or not
 const fs=require('fs');
-fs.__dirname="C:/Users/HP/Desktop/nodejs/05";
-fs.exists(path.join(__dirname,"hello.txt"),(exists)=>{
+fs.__dirname= 'C:\\Users\\user\\Desktop\\node-basics\\05';
+fs.exists(path.join(fs.__dirname,"hello.txt"),(exists)=>{
     console.log(exists);
 });
+
+
