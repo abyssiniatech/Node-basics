@@ -1,4 +1,4 @@
-const module=require('module');
+
 const sum=(a,b)=>{
     return a+b;
 }
