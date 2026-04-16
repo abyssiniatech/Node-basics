@@ -3,6 +3,7 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
+    
 
     fs.readFile("./view/index.html", "utf-8", (err, data) => {
         if (err) {
