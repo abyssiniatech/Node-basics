@@ -1,0 +1,35 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    background-color:teal;
+    font-family:arial;
+}
+.container{
+    display:flex;
+    justify-centent:center;
+    align-items:center;
+    flex-direction:column;
+    min-hieght:100vh;
+
+}
+.header{
+    min-hight:20%;
+    display:flex;
+    margin:10px;
+    font-size:1.5em;
+    background-color:gray;
+    justify-content:space-between:
+}
+.main{
+  min-hieght:70%;
+  background-color:skyblue;
+}
+.footer{
+    min-hieght:10%;
+    background-color:black;
+    color:white;
+    
+}
