@@ -1,11 +1,23 @@
 const fs = require('fs');
 const http = require('http');
-
+const path="./view/"
 const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
-    
+    switch (req.url) {
+        case '/':
+            path+="index.html";
+            break;
 
-    fs.readFile("./view/index.html", "utf-8", (err, data) => {
+        case '/about':
+            path+="index.html";
+            break;
+    
+        default:
+            path+= "404.html"
+            break;
+    }
+
+    fs.readFile(path, (err, data) => {
         if (err) {
             console.log(err);
             res.statusCode = 500;
