@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: white;
+            color: #1e3c72;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ddd;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* FEATURES */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #2a5298;
+        }
+
+        /* ABOUT PREVIEW */
+        .about-preview {
+            margin-top: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1>Welcome to My Express App</h1>
+    <p>Building fast, modern and scalable web applications with Node.js</p>
+    <a href="/about" class="btn">Learn More</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <h2 style="text-align:center;">What We Offer</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>⚡ Fast Backend</h3>
+            <p>High-performance Node.js & Express server setup.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Clean UI</h3>
+            <p>Modern and responsive design for all devices.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔗 API Ready</h3>
+            <p>Build REST APIs for real-world applications.</p>
+        </div>
+
+    </div>
+
+    <!-- ABOUT PREVIEW -->
+    <div class="about-preview">
+        <h2>About This Project</h2>
+        <p>
+            This is a simple Express-based web application designed to help you
+            learn routing, templates, and backend integration with HTML.
+        </p>
+        <a href="/about" class="btn">Read About Us</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 My Express Project | Built with Node.js 🚀</p>
+</footer>
+
+</body>
+</html>

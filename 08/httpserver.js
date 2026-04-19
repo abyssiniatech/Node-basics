@@ -1,37 +1,49 @@
 const http = require("http");
+const fs = require("fs");
+const path = require("path");
 
 const server = http.createServer((req, res) => {
 
     res.setHeader("Content-Type", "text/html");
 
-    switch (req.url) {
+    const url = req.url.toLowerCase();
+
+    let filePath = "";
+    let statusCode = 200;
+
+    switch (url) {
 
         case "/":
-            res.end(`
-                <h1>Home Page</h1>
-                <a href="/about">Go About</a>
-            `);
+        case "/home":
+            filePath = path.join(__dirname, "view", "home.html");
             break;
 
         case "/about":
-            res.end(`
-                <h1>About Page</h1>
-                <a href="/">Go Home</a>
-            `);
+            filePath = path.join(__dirname, "view", "about.html");
             break;
 
         case "/contact":
-            res.end(`
-                <h1>Contact Page</h1>
-            `);
+            filePath = path.join(__dirname, "view", "contact.html");
             break;
 
         default:
-            res.statusCode = 404;
-            res.end("<h1>404 Page Not Found</h1>");
+            filePath = path.join(__dirname, "view", "404.html");
+            statusCode = 404;
+            break;
     }
+
+    res.statusCode = statusCode;
+
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            res.statusCode = 500;
+            res.end("<h1>Server Error</h1>");
+        } else {
+            res.end(data);
+        }
+    });
 });
 
 server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000");
+    console.log("Server running at http://localhost:3000");
 });
