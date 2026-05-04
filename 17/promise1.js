@@ -8,4 +8,4 @@ fs.readFile("promise.txt",'utf-8')
 .catch((err)=>{
     console.log(err)
 
-}
+})
