@@ -1,22 +1,11 @@
-// const http=require("http");
-const express =require('express');
-// const server=http.createServer((req,res)=>{
-    
-//     res.write("welcome to http server")
-//     res.end("End")
-// })
+const express = require('express')
 
-// server.listen(3000,()=>{
-//     console.log("run at https://localhost:3000")
-// })
+const app = express()
 
-
-// express server
-const app=express();
-app.get("/",(req,res)=>{
-    res.write("welcome to express server")
+app.get("/", (req, res) => {
+    res.status(200).send('<h1>My Website</h1>')
 })
 
-app.listen(2000,()=>{
-    console.log("welcome")
+app.listen(5000, () => {
+    console.log("Server running at http://localhost:5000")
 })
