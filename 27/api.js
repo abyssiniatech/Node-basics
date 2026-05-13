@@ -1,15 +1,15 @@
 const express= require('express');
 const app=express()
 
-// // server logic
-// app.get('/',(req,res)=>{
-//     res.json({name:"surafel",age:39,email:"sura@gmail.com"})
-// })
+// server logic
+app.get('/',(req,res)=>{
+    res.json({name:"surafel",age:39,email:"sura@gmail.com"})
+})
 
 
-// app.listen(3000,()=>{
-//  console.log("3000")
-// })
+app.listen(3000,()=>{
+ console.log("3000")
+})
 
 
 
