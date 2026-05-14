@@ -27,5 +27,5 @@ const server = http.createServer((req, res) => {
 
 // port
 server.listen(3001, () => {
-    console.log("Server running on http://localhost:3001");
+    console.log("Seryver running on http://localhost:3001");
 });
